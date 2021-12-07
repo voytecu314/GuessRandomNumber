@@ -1,6 +1,10 @@
 let answer;
 let counter = 0;
-let max = parseInt(prompt("Give maximal number up to which I can choose","10"));
+let max;
+while(!max || max<=5){	
+	max = parseInt(prompt("Give maximal number biger than 5 up to which I can choose","6"));	
+}
+
 let random = Math.ceil(Math.random()*max);
 let table = `<table>
 <tr>
