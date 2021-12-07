@@ -26,6 +26,8 @@ let table = `<table>
   <th>Numbers</th>
   <th>Advice</th>
 </tr>`;
+let absBefore = max; //because u dont know the number
+let temperature = '';
 
 do {
     counter++;
@@ -33,7 +35,9 @@ do {
     answer = prompt(`Guess a number from 1 - ${max}`);
     let abs = Math.abs(random - answer);
     let check = (abs==0)?"BINGO":(abs<=parseInt(.1*max))?"VERY HOT":(abs<=parseInt(.2*max))?"HOT":(abs<=parseInt(.3*max))?"WARM":"COLD";
-
+	temperature = (absBefore-abs>0)?"getting warmer":(absBefore-abs<0)?"getting colder":"the same temperature as before";
+	absBefore = abs;
+	
     console.log("*********");
     console.log("Comp no: "+random);
     console.log("User no: "+answer);
@@ -60,7 +64,7 @@ do {
         alert("BINGO!");
     } 
         else {
-            alert(check);
+            alert("Its "+check+" and is "+temperature);
         }
 } while(random!=answer)
 
