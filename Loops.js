@@ -1,6 +1,7 @@
 let answer;
 let counter = 0;
-let random = Math.ceil(Math.random()*10);
+let max = parseInt(prompt("Give maximal number up to which I can choose","10"));
+let random = Math.ceil(Math.random()*max);
 let table = `<table>
 <tr>
   <th>Turns</th>
@@ -11,9 +12,9 @@ let table = `<table>
 do {
     counter++;
     
-    answer = prompt("Guess a number from 1-10");
+    answer = prompt(`Guess a number from 1 - ${max}`);
     let abs = Math.abs(random - answer);
-    let check = (abs==0)?"BINGO":(abs==1)?"VERY HOT":(abs==2)?"HOT":(abs==3)?"WARM":"COLD";
+    let check = (abs==0)?"BINGO":(abs<=parseInt(.1*max))?"VERY HOT":(abs<=parseInt(.2*max))?"HOT":(abs<=parseInt(.3*max))?"WARM":"COLD";
 
     console.log("*********");
     console.log("Comp no: "+random);
