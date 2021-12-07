@@ -1,0 +1,29 @@
+table {
+    display: inline-block;
+}
+
+table, th, tr, td {
+    border-collapse: collapse;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+tr:last-child {
+    background-color: chartreuse ;
+}
+
+div {
+    display: inline-grid;
+    border: 1px solid red;
+    place-items: center;
+    margin-left: 2rem;
+    font-size: 5rem;
+    color: magenta;
+    animation: rotate 3s 10;
+}
+
+@keyframes rotate {
+    
+    0% {transform: rotate(720deg);}
+
+}
