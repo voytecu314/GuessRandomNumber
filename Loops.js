@@ -13,7 +13,7 @@ do {
     
     answer = prompt("Guess a number from 1-10");
     let abs = Math.abs(random - answer);
-    let check = abs==1?"VERY HOT":(abs==2)?"HOT":(abs==3)?"WARM":"COLD";
+    let check = (abs==0)?"BINGO":(abs==1)?"VERY HOT":(abs==2)?"HOT":(abs==3)?"WARM":"COLD";
 
     console.log("*********");
     console.log("Comp no: "+random);
