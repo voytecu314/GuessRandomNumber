@@ -5,6 +5,20 @@ while(!max || max<=5){
 	max = parseInt(prompt("Give maximal number biger than 5 up to which I can choose","6"));	
 }
 
+if(max<15) {
+	document.body.innerHTML=`<h1>LEVEL VERY EASY</h1>`
+} else if(max<50) {
+	document.body.innerHTML=`<h1>LEVEL EASY</h1>`
+	} else if(max<225) {
+		document.body.innerHTML=`<h1>LEVEL INTERMIDIATE</h1>`
+		} else if(max<500) {
+			document.body.innerHTML=`<h1>LEVEL INTERMIDIATE</h1>`
+			} else if(max<1000) {
+				document.body.innerHTML=`<h1>LEVEL ADVANCED</h1>`
+				} else if(max>1000) {
+					document.body.innerHTML=`<h1>LEVEL VERY HARD</h1>`
+					}
+
 let random = Math.ceil(Math.random()*max);
 let table = `<table>
 <tr>
@@ -35,11 +49,10 @@ do {
     if(answer==random) {
         document.body.innerHTML += 
 		`<h1>You guessed! <br> By 
-		${counter}
-		${(counter.toString()[counter.toString().length-1]=="1")?"st"
-		 :(counter.toString()[counter.toString().length-1]=="2")?"nd"
-		 :(counter.toString()[counter.toString().length-1]=="3")?"rd"
-		 :"th"} time.</h1>`
+		${counter}${(counter.toString()[counter.toString().length-1]=="1")?"st"
+				   :(counter.toString()[counter.toString().length-1]=="2")?"nd"
+				   :(counter.toString()[counter.toString().length-1]=="3")?"rd"
+		           :"th"} time.</h1>`
 		 +table+'</table>' + 
         `<div>
         ${random}
