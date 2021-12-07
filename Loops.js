@@ -28,7 +28,14 @@ do {
 
 
     if(answer==random) {
-        document.body.innerHTML += `<h1>You guessed! <br> By ${counter}${(counter.toString()[counter.toString().length-1]=="1")?"st":(counter.toString()[counter.toString().length-1]=="2")?"nd":(counter.toString()[counter.toString().length-1]=="3")?"rd":"th"} time.</h1>`+table+'</table>' + 
+        document.body.innerHTML += 
+		`<h1>You guessed! <br> By 
+		${counter}
+		${(counter.toString()[counter.toString().length-1]=="1")?"st"
+		 :(counter.toString()[counter.toString().length-1]=="2")?"nd"
+		 :(counter.toString()[counter.toString().length-1]=="3")?"rd"
+		 :"th"} time.</h1>`
+		 +table+'</table>' + 
         `<div>
         ${random}
         </div>`; 
