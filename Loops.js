@@ -24,7 +24,9 @@ let table = `<table>
 <tr>
   <th>Turns</th>
   <th>Numbers</th>
-  <th>Advice</th>
+  <th>Temperature</th>
+  <th>Away</th>
+  <th>Temp. tendency</th>
 </tr>`;
 let absBefore = max; //because u dont know the number
 let temperatureChange = '';
@@ -47,6 +49,8 @@ do {
             <td>${counter}</td>
             <td>${answer}</td>
             <td>${temperature}</td>
+            <td>${abs}</td>
+            <td>${temperatureChange}</td>
             </tr>`;
 
 
