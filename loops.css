@@ -14,6 +14,10 @@ table, th, tr, td {
     text-align: center;
 }
 
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
 tr:last-child {
     background-color: chartreuse ;
 }
