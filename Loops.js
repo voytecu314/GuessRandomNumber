@@ -10,11 +10,11 @@ if(max<15) {
 } else if(max<50) {
 	document.body.innerHTML=`<h1>LEVEL EASY</h1>`
 	} else if(max<225) {
-		document.body.innerHTML=`<h1>LEVEL INTERMIDIATE</h1>`
+		document.body.innerHTML=`<h1>LEVEL INTERMEDIATE</h1>`
 		} else if(max<500) {
-			document.body.innerHTML=`<h1>LEVEL INTERMIDIATE</h1>`
+			document.body.innerHTML=`<h1>LEVEL ADVANCED</h1>`
 			} else if(max<1000) {
-				document.body.innerHTML=`<h1>LEVEL ADVANCED</h1>`
+				document.body.innerHTML=`<h1>LEVEL HARD</h1>`
 				} else if(max>1000) {
 					document.body.innerHTML=`<h1>LEVEL VERY HARD</h1>`
 					}
